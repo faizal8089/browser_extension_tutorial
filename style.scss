@@ -14,10 +14,22 @@ body {
   padding-left: 10px;
   margin-left: 10px;
   padding-right: 10px;
+  border: 1px solid green;
   color: white;
-  border: none;
   font-weight: bold;
   background-color: green;
+  font-size: x-large;
+}
+#reset {
+  border-radius: 5em;
+  cursor: pointer;
+  padding-left: 10px;
+  margin-left: 10px;
+  padding-right: 10px;
+  border: 1px solid green;
+  color: green;
+  font-weight: bold;
+  background-color: rgb(255, 255, 255);
   font-size: x-large;
 }
 #input-el {

@@ -6,6 +6,8 @@ const input = document.getElementById("input-el");
 const ulEl = document.getElementById("ul-el");
 const inputBtn = document.getElementById("input-btn");
 const reset = document.getElementById("reset");
+const savetab = document.getElementById("savetab");
+const body = document.getElementById("body");
 
 if(localStorage.getItem("myLeads")!=null){
     display();
@@ -27,6 +29,22 @@ inputBtn.addEventListener("click", function (){
         localStorage.setItem("myLeads", myLeads);
         display();
     }
+});
+
+savetab.addEventListener("dblclick", function(){
+    // const para = document.createElement("li");
+    // para.innerHTML = tabs[0].url;
+    // ulEl.append(para);
+    // chrome.tabs.query({active: true, currentWindow : true}, function(tabs){
+    //     let activeTab = tabs[0];
+    //     let activeTabId = activeTab.id;
+    // });
+    chrome.tabs.query({active : true, currentWindow : true}, function(tabs){
+        myLeads.push(tabs[0].url);
+        myLeads = JSON.stringify(myLeads);
+        localStorage.setItem("myLeads", myLeads);
+        display();
+    });
 });
 
 

@@ -8,7 +8,8 @@ body {
   min-width: 200px;
   max-width: 400px;
 }
-#input-btn {
+#input-btn,
+#savetab {
   border-radius: 5em;
   cursor: pointer;
   padding-left: 10px;
@@ -45,7 +46,8 @@ body {
   box-sizing: border-box;
 }
 
-a {
+a,
+p {
   color: green;
   text-decoration: none;
 }
